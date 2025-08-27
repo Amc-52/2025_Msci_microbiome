@@ -4,13 +4,13 @@
 
 #SBATCH --account=none # the project account
 #SBATCH --job-name=QC_preproc # name of job
-#SBATCH --partition=nodes # we are using CPU nodes
-#SBATCH --time=0-04:00:00 # how long do we expect this job to run?
-#SBATCH --mem=4G # how much memory do we want?
-#SBATCH --nodes=1 # how many nodes do we want?
-#SBATCH --ntasks=1 # how many tasks are we submitting?
-#SBATCH --cpus-per-task=1 # how many CPUs do we want for each task?
-#SBATCH --ntasks-per-node=1 # how many tasks do we want to run on each node? Well, at least cutadapt only has single thread, so...
+#SBATCH --partition=nodes # using CPU nodes
+#SBATCH --time=0-04:00:00 # time allocated for job
+#SBATCH --mem=4G # memory allocated
+#SBATCH --nodes=1 # nodes allocated
+#SBATCH --ntasks=1 # number of tasks submitted
+#SBATCH --cpus-per-task=1 
+#SBATCH --ntasks-per-node=1 
 #SBATCH --mail-user=2469736m@student.gla.ac.uk # email address for notifications
 #SBATCH --mail-type=END # mail me when my jobs ends
 #SBATCH --mail-type=FAIL # mail me if my jobs fails
@@ -142,3 +142,4 @@ cut ${i21} ${trimmed_21}
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
